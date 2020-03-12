@@ -5,13 +5,13 @@ $db = 'mydb';
 $host = 'localhost:8889';
 
 $link = new mysqli(
-   $host, 
-   $username, 
+   $host,
+   $username,
    $password,$db
 );
 
 if ($link->connect_error) {
-    die("Connection failed: " . $link->connect_error);} 
+    die("Connection failed: " . $link->connect_error);}
 
 $phone=mysqli_real_escape_string($link, $_POST['phone']);
 $comment=mysqli_real_escape_string($link, $_POST['comment']);
